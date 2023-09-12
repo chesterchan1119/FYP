@@ -1,0 +1,115 @@
+BSc (Hons) in Computer Science
+Final Year Project - 1st Progress Report
+
+Team Member: 
+Member 1: Chan Cheuk Him 20202326 
+Member 2: Chan Chi Hin Jonathan 20202288 
+Member 3: Yu Fu Hon 20201702 
+
+Requirement: 
+
+Objective: 
+The application aims to provide a comprehensive Gymnastic Personal Training experience. 
+
+Details: 
+Instant 1-on-1 conversation: Client can seek gymnastic advices to Virtual Trainer and have the response instantly via voice and sound display. 
+
+3D Video Processing: Real-time Visual input can also be transmitted to the virtual trainer through the camera. And it would give accuracy for the gymnastic position’s correctness (e.g. Bench Press) 
+
+User data Tracking: a dedicated page designed to capture and store your valuable user data, providing a comprehensive overview towards achieving users’ fitness goals, data including workout duration, skill progression, sets and reps, body measurements, and personal bests.
+
+
+Division of labor: 
+Member 1's work:    3D Modeling of AR Character, Frontend
+Member 2's work:    Fine tuning GPT model, implementation voice conversation
+Member 3's work:    CVPR on Image/Video, processing and generate suggestion on posture
+
+
+
+Proposed Solution:
+Frontend: React Native
+Backend:  Python Flask
+Deep Learning Model:  Alphapose, scikit-learn
+Database:   MongoDB
+3D model for virtual trainer character:   Blender, ThreeJS
+Deployment:    AWS Cloud
+Validation / Testing:    Postman, Appium
+
+https://drive.google.com/file/d/1AAySQ2d9morUn2xKR6sjXr2NQORDGIsK/view?usp=sharing
+
+
+Proposed Schedule and what we have achieved so far:
+
+
+
+Proposed Timeline
+
+
+AUG
+SEP
+OCT
+NOV
+DEC
+JAN
+FEB
+MAR
+APR
+
+
+UI / UX Design
+
+
+Environment Setup
+
+
+Dataset Preparation
+
+
+Frontend implementation
+
+
+
+
+
+
+Backend Implementation
+
+
+CVPR AI Model
+
+
+
+Virtual Trainer Development
+
+
+
+
+Gymnastic video processing Implementation
+
+
+
+
+
+Testing / Validation
+
+
+
+Deployment
+
+By September, we have completed: 
+UI / UX Design
+
+                       
+https://www.figma.com/file/cICYLjVQaYSBYuvFP6v6zI/3D-Coach?type=design&node-id=2-2&mode=design
+Frontend implementation for Home Page
+Research on Deep Learning Model
+
+
+Problems encountered:
+Lack of high performance hardware resource for AI model processing
+
+
+Activities currently engaging in: 
+Developing the frontend with React Native
+Designing and Creating our virtual trainer character with Blender
+

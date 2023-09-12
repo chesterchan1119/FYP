@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Chatbot</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='../statics/index.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../statics/index.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+
+        <h1>Chatbot</h1>
+        <br> 
+    
+        <p>This chatbot had learnt the data from your data.txt</p>
+      </div>
+      <button class="btn btn-primary" onclick="clearMessage()">Clear</button>
+      <script> 
+       function clearMessage() {
+        fetch("/clear", { method: "POST", body: "clear=true" })
+          .then(() => {
+            const chatBox = document.getElementById("chatBox");
+            chatBox.innerHTML = "";
+          })
+          .catch((error) => {
+            console.error("Error clearing messages:", error);
+          });
+      }
+      </script>
+      <div class="chatbox" id="chatBox">
+        {% for message in messages %}
+        <div class="message {{ message.class }}">
+          <div class="avatar"></div>
+          <p>{{ message.text }}</p>
+          <div class="timestamp">{{ message.timestamp }}</div>
+        </div>
+        {% endfor %}
+        <div class="message loading" id="message-loading">
+          <div class="spinner" id="spinner"></div>
+        </div>
+      </div>
+      <form method="post" class="inputbox" onsubmit="showSpinner()">
+        <input type="text" name="prompt" id="prompt" placeholder="Type a message...">
+        <input type="submit" value="Send">
+      </form>
+    </div>
+    <button class="btn btn-primary" onclick="showToken()">Show API key token</button>
+
+    <div class="container">
+     <p id="result"></p>
+    </div>
+    <script>
+      function showSpinner() {
+        const chatBox = document.getElementById("chatBox");
+        const spinner = document.getElementById("message-loading");
+        spinner.style.display = "block";
+        spinner.style.textAlign= "center";
+        spinner.style.margin= "auto";
+      }
+    </script>
+
+
+<script> 
+function showToken() {
+  console.log("it is called")
+  fetch("/show_token", { method: "GET"})
+    .then((response) => response.json())
+    .then((data) => {
+
+      const result = document.getElementById("result");
+      console.log(data.total_tokens)
+      result.innerText = data.total_tokens;
+      console.log("it is put with the result")
+    })
+    .catch((error) => {
+      console.error("Error clearing messages:", error);
+    });
+}
+  
+</script>
+  </body>
+</html>

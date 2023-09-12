@@ -1,0 +1,132 @@
+body {
+    background-color: #ededed;
+    font-size: 16px;
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .header h1 {
+    font-size: 28px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  .chatbox {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .chatbox .message {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .chatbox .message .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #ddd;
+  }
+  .chatbox .message .user-message {
+    background-color: #9ed7c0;
+    align-self: flex-start;
+   
+  }
+  .chatbox .message .bot-message {
+    background-color: #fff;
+    align-self: flex-end;
+ 
+  }
+  .chatbox .message p {
+    margin: 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    max-width: 70%;
+    word-wrap: break-word;
+  }
+  .chatbox .message .timestamp {
+    font-size: 14px;
+    margin-top: auto;
+    margin-left: 10px;
+    color: #999;
+  }
+  .inputbox {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .inputbox input[type="text"] {
+    flex: 1;
+    border-radius: 30px;
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
+  .inputbox input[type="submit"] {
+    background-color: #25D366;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .inputbox input[type="submit"]:hover {
+    background-color: #1da14e;
+  }
+  .btn-primary{
+    background-color: hsl(211, 70%, 49%);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover{
+    background-color: hsl(211, 70%, 32%);
+  }
+
+
+.spinner {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  border-top-color: #000;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+#message-loading {
+  display: none;
+  justify-content: center;
+}
+
+.message.loading .avatar {
+  background-color: #ccc;
+}
+
+.message.loading .timestamp {
+  display: none;
+}
